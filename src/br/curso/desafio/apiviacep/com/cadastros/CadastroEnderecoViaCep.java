@@ -1,5 +1,6 @@
 package br.curso.desafio.apiviacep.com.cadastros;
 
+
 public record CadastroEnderecoViaCep(String cep, String logradouro, String bairro,
                                      String localidade, String uf) {
 

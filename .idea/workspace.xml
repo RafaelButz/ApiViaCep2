@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abe10b3b-d537-41bf-9717-6c8e98e2af25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiViaCep2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/apiviacep/InterfaceChave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/apiviacep/PesquisaCepApiViaCep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEndereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEnderecoViaCep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/GeraChave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/Usuario.java" afterDir="false" />
+    <list default="true" id="abe10b3b-d537-41bf-9717-6c8e98e2af25" name="Changes" comment="Refatorando metodo de criação de arquivo com registros realizados">
+      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/InterFaceGeraLista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CadastroCliente.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CadastroCliente.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CadastroEndereco.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CadastroEndereco.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registros.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Registros.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEndereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEndereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEnderecoViaCep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEnderecoViaCep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/GeraChave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/GeraChave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/CriaLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/CriaLista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +29,8 @@
       <list>
         <option value="Record" />
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -52,7 +50,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/leafa/OneDrive/Área de Trabalho/Java Alura/gson-2.10.1.jar",
+    "last_opened_file_path": "C:/Users/leafa/OneDrive/Área de Trabalho/Curso JavaAlura/ApiViaCep2",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -75,7 +73,27 @@
       <option name="presentableId" value="Default" />
       <updated>1683118806882</updated>
     </task>
+    <task id="LOCAL-00001" summary="Basicamente finalizado proposta de exercicios do curso. Necessario criação de try{} catch&#10;Transformar os registros em Json.">
+      <created>1683146980973</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683146980973</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refatorando metodo de criação de arquivo com registros realizados">
+      <created>1683204375837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683204375837</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basicamente finalizado proposta de exercicios do curso. Necessario criação de try{} catch&#10;Transformar os registros em Json." />
+    <MESSAGE value="Refatorando metodo de criação de arquivo com registros realizados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando metodo de criação de arquivo com registros realizados" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ApiViaCep2$Main.ic" NAME="Main Coverage Results" MODIFIED="1683137165338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

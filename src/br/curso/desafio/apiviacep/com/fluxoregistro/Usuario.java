@@ -4,10 +4,10 @@ import br.curso.desafio.apiviacep.com.apiviacep.PesquisaCepApiViaCep;
 import br.curso.desafio.apiviacep.com.cadastros.CadastroCliente;
 import br.curso.desafio.apiviacep.com.cadastros.CadastroEndereco;
 import br.curso.desafio.apiviacep.com.cadastros.GeraChave;
-
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.util.Scanner;
 
 public class Usuario{
@@ -16,23 +16,16 @@ public class Usuario{
     GeraChave chaveCadastral;
     FileWriter escreva;
 
-
-    CadastroEndereco novoEndereco;
-    CadastroCliente cadastroCliente;
+    CriaLista listaDeListas = new CriaLista();
+    CriaArquivo novoArquivo  = new CriaArquivo();
     Scanner scanner = new Scanner(System.in);
     PesquisaCepApiViaCep pesquisaCep = new PesquisaCepApiViaCep();
+
     GeraChave novaChave;
+    CadastroEndereco novoEndereco;
+    CadastroCliente cadastroCliente;
 
     public void textoCadastroEndereco() throws IOException, InterruptedException {
-
-        RandomAccessFile registroCliente = new RandomAccessFile("Cadastro.txt", "rw");
-        registroCliente.seek(registroCliente.length());
-
-        RandomAccessFile registros = new RandomAccessFile("Registros.txt", "rw");
-        registros.seek(registros.length());
-
-        RandomAccessFile registroEndereco = new RandomAccessFile("CadastroEndereco.txt", "rw");
-        registroEndereco.seek(registroEndereco.length());
 
         System.out.println("Pesquisar endereço por CEP:");
         cep = scanner.nextLine();
@@ -43,6 +36,7 @@ public class Usuario{
         System.out.println("Confirma endereço?");
         System.out.println("Digite [1] sim    [2] não");
         entrada = scanner.nextLine();
+
         if(entrada.equalsIgnoreCase("1")){
             this.novoEndereco = new CadastroEndereco(pesquisaCep.getNovoViaCep());
         }else{
@@ -52,25 +46,28 @@ public class Usuario{
         System.out.println("Digite o numero: ");
         entrada = scanner.nextLine();
         novoEndereco.setNumero(entrada);
+        novoEndereco.listaEndereco(novoEndereco);
 
         textoCadastroCliente();
-
         System.out.println(cadastroCliente + "\n" + novoEndereco);
         novaChave = new GeraChave(cadastroCliente, novoEndereco);
+        novaChave.listaChave(novaChave);
         System.out.println(novaChave);
 
-        registroCliente.write(novaChave.toString().getBytes());
-        registroCliente.write(cadastroCliente.toString().getBytes());
-        registroCliente.close();
+        listaDeListas.incluiListaCliente(novaChave);
+        listaDeListas.incluiListaCliente(cadastroCliente);
+        listaDeListas.incluiListaCliente(novoEndereco);
 
-        registroEndereco.write(novaChave.toString().getBytes());
-        registroEndereco.write(novoEndereco.toString().getBytes());
-        registroEndereco.close();
+        Gson gson = new GsonBuilder().create();
+        FileWriter escrita = new FileWriter("Cadastro.json");
+        escrita.write(gson.toJson(listaDeListas.getListasCadastro().toString()));
+        escrita.close();
 
-        registros.write(novaChave.toString().getBytes());
-        registros.write(cadastroCliente.toString().getBytes());
-        registros.write(novoEndereco.toString().getBytes());
-        registros.close();
+        System.out.println(listaDeListas.getListasCadastro().toString());
+
+        novoArquivo.criaArquivoCliente(novaChave, cadastroCliente);
+        novoArquivo.criaArquivoEndereco(novaChave, novoEndereco);
+        novoArquivo.criaArquivoRegistros(novaChave, novoEndereco, cadastroCliente);
 
     }
 
@@ -90,10 +87,15 @@ public class Usuario{
         telefone = scanner.nextLine();
 
         this.cadastroCliente = new CadastroCliente(nome, cpf, telefone);
+        cadastroCliente.listaCliente(cadastroCliente);
 
        // System.out.println(cadastroCliente);
 
 
     }
 
+    @Override
+    public String toString() {
+        return cadastroCliente + " | " + novoEndereco;
+    }
 }

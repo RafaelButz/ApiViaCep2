@@ -1,10 +1,12 @@
 package br.curso.desafio.apiviacep.com.cadastros;
 
 import br.curso.desafio.apiviacep.com.apiviacep.InterfaceChave;
+import br.curso.desafio.apiviacep.com.fluxoregistro.InterFaceGeraLista;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
 
-public class CadastroEndereco implements InterfaceChave {
+public class CadastroEndereco implements InterfaceChave, InterFaceGeraLista {
 
     private String cep;
     private String logradouro;
@@ -14,6 +16,8 @@ public class CadastroEndereco implements InterfaceChave {
     private String numero;
     private int chaveCadastro;
 
+    ArrayList<CadastroEndereco> listaEndereco = new ArrayList<>();
+
     SecureRandom secureRandom = new SecureRandom();
     public CadastroEndereco(CadastroEnderecoViaCep enderecoViaCep){
         this.cep = enderecoViaCep.cep();
@@ -22,6 +26,10 @@ public class CadastroEndereco implements InterfaceChave {
         this.localidade = enderecoViaCep.localidade();
         this.uf = enderecoViaCep.uf();
         this.chaveCadastro = secureRandom.nextInt(1000000);
+    }
+
+    public void listaEndereco(CadastroEndereco cadastroEndereco){
+        listaEndereco.add(cadastroEndereco);
     }
 
     public void setNumero(String numero) {
@@ -68,5 +76,14 @@ public class CadastroEndereco implements InterfaceChave {
     @Override
     public int getGeraChave() {
         return getChaveCadastro();
+    }
+
+    public ArrayList<CadastroEndereco> getListaEndereco() {
+        return listaEndereco;
+    }
+
+    @Override
+    public Object getGeralista() {
+        return getListaEndereco();
     }
 }
