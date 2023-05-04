@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abe10b3b-d537-41bf-9717-6c8e98e2af25" name="Changes" comment="Refatorando metodo de criação de arquivo com registros realizados">
-      <change afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/InterFaceGeraLista.java" afterDir="false" />
+    <list default="true" id="abe10b3b-d537-41bf-9717-6c8e98e2af25" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CadastroCliente.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CadastroCliente.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CadastroEndereco.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CadastroEndereco.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cadastros.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Registros.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Registros.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registroJson.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEndereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEndereco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEnderecoViaCep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/CadastroEnderecoViaCep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/GeraChave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/cadastros/GeraChave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/apiviacep/PesquisaCepApiViaCep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/apiviacep/PesquisaCepApiViaCep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/CriaLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/CriaLista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/curso/desafio/apiviacep/com/fluxoregistro/Usuario.java" afterDir="false" />
     </list>
@@ -43,19 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/leafa/OneDrive/Área de Trabalho/Curso JavaAlura/ApiViaCep2",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/leafa/OneDrive/Área de Trabalho/Curso JavaAlura/ApiViaCep2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />

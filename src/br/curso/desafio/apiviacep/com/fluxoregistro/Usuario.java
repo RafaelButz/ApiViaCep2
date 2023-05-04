@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.Scanner;
 
 public class Usuario{
@@ -54,14 +55,18 @@ public class Usuario{
         novaChave.listaChave(novaChave);
         System.out.println(novaChave);
 
-        listaDeListas.incluiListaCliente(novaChave);
-        listaDeListas.incluiListaCliente(cadastroCliente);
-        listaDeListas.incluiListaCliente(novoEndereco);
+        listaDeListas.incluiLista(novaChave);
+        listaDeListas.incluiLista(cadastroCliente);
+        listaDeListas.incluiLista(novoEndereco);
 
-        Gson gson = new GsonBuilder().create();
-        FileWriter escrita = new FileWriter("Cadastro.json");
-        escrita.write(gson.toJson(listaDeListas.getListasCadastro().toString()));
-        escrita.close();
+        Gson gson = new Gson();
+
+        RandomAccessFile registos = new RandomAccessFile("Cadastro.json", "rw");
+        registos.seek(registos.length());
+        registos.write("\n".getBytes());
+        registos.write(gson.toJson(listaDeListas.getListasCadastro().toString()).getBytes());
+        registos.write("\n".getBytes());
+        registos.close();
 
         System.out.println(listaDeListas.getListasCadastro().toString());
 

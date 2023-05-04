@@ -1,22 +1,22 @@
 
 
-Chave: 721231
-Rua: Rua Taka
-Bairro: Jardim Japão
+Chave: 1100265
+Rua: Praça da Sé
+Bairro: Sé
 Cidade: São Paulo
 UF: SP
-CEP: 02124-070
+CEP: 01001-000
 
-Chave: 851414
-Rua: Rua Taka
-Bairro: Jardim Japão
+Chave: 663007
+Rua: Alameda Raja Gabaglia
+Bairro: Vila Olímpia
 Cidade: São Paulo
 UF: SP
-CEP: 02124-070
+CEP: 04551-090
 
-Chave: 815773
-Rua: Rua Taka
-Bairro: Jardim Japão
+Chave: 1366600
+Rua: Alameda Vicente Pinzon
+Bairro: Vila Olímpia
 Cidade: São Paulo
 UF: SP
-CEP: 02124-070
+CEP: 04547-130

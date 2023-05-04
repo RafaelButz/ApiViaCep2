@@ -23,10 +23,10 @@ public class PesquisaCepApiViaCep {
         this.cep = cep;
 
         if(this.cep.length() != 8 ){
-        this.endereco = "https://viacep.com.br/ws/01001000/json/";
+            this.endereco = "https://viacep.com.br/ws/01001000/json/";
         }else {
-        this.cep = cep;
-        this.endereco = "https://viacep.com.br/ws/" + cep + "/json/";
+            this.cep = cep;
+            this.endereco = "https://viacep.com.br/ws/" + cep + "/json/";
         }
 
         HttpClient client = HttpClient.newHttpClient();
